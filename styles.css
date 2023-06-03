@@ -27,6 +27,18 @@ body {
   height: 2px;
 }
 
+.circle > .circle-line::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-top: -10px;
+  background-color: rgb(255, 102, 0);
+  opacity: 0;
+}
+
 .circle > .circle-line:nth-child(1) {
   transform: rotate(calc(22.5deg * 1));
 }
@@ -57,18 +69,6 @@ body {
 
 .circle > .circle-line:nth-child(8) {
   transform: rotate(calc(22.5deg * 8));
-}
-
-.circle > .circle-line::before {
-  position: absolute;
-  display: block;
-  content: "";
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  margin-top: -10px;
-  background-color: rgb(255, 102, 0);
-  opacity: 0;
 }
 
 .circle > .circle-line:nth-child(8)::before {
