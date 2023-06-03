@@ -1,0 +1,124 @@
+body {
+  background-color: rgb(226, 226, 226);
+}
+
+.circle {
+  content: "";
+  width: 50vh;
+  height: 50vh;
+  border-radius: 50%;
+  background-color: rgb(32, 32, 32);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px 1px black;
+}
+
+.circle > .circle-line {
+  content: "";
+  position: absolute;
+  top: auto;
+  left: auto;
+  width: 100%;
+  height: 2px;
+}
+
+.circle > .circle-line:nth-child(1) {
+  transform: rotate(calc(22.5deg * 1));
+}
+
+.circle > .circle-line:nth-child(2) {
+  transform: rotate(calc(22.5deg * 2));
+}
+
+.circle > .circle-line:nth-child(3) {
+  transform: rotate(calc(22.5deg * 3));
+}
+
+.circle > .circle-line:nth-child(4) {
+  transform: rotate(calc(22.5deg * 4));
+}
+
+.circle > .circle-line:nth-child(5) {
+  transform: rotate(calc(22.5deg * 5));
+}
+
+.circle > .circle-line:nth-child(6) {
+  transform: rotate(calc(22.5deg * 6));
+}
+
+.circle > .circle-line:nth-child(7) {
+  transform: rotate(calc(22.5deg * 7));
+}
+
+.circle > .circle-line:nth-child(8) {
+  transform: rotate(calc(22.5deg * 8));
+}
+
+.circle > .circle-line::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-top: -10px;
+  background-color: rgb(255, 102, 0);
+  opacity: 0;
+}
+
+.circle > .circle-line:nth-child(8)::before {
+  animation: circleMove 2s 0s infinite ease-in-out alternate, circleOpacity 0.5s 1s forwards;
+}
+
+.circle > .circle-line:nth-child(4)::before {
+  animation: circleMove 2s 3s infinite ease-in-out alternate, circleOpacity 0.5s 3s forwards;
+}
+
+.circle > .circle-line:nth-child(2)::before {
+  animation: circleMove 2s 2.5s infinite ease-in-out alternate, circleOpacity 0.5s 7s forwards;
+}
+
+.circle > .circle-line:nth-child(6)::before {
+  animation: circleMove 2s 3.5s infinite ease-in-out alternate, circleOpacity 0.5s 5.5s forwards;
+}
+
+.circle > .circle-line:nth-child(1)::before {
+  animation: circleMove 2s 2.25s infinite ease-in-out alternate, circleOpacity 0.5s 4.5s forwards;
+}
+
+.circle > .circle-line:nth-child(7)::before {
+  animation: circleMove 2s 3.75s infinite ease-in-out alternate, circleOpacity 0.5s 10s forwards;
+}
+
+.circle > .circle-line:nth-child(5)::before {
+  animation: circleMove 2s 3.25s infinite ease-in-out alternate, circleOpacity 0.5s 9s forwards;
+}
+
+.circle > .circle-line:nth-child(3)::before {
+  animation: circleMove 2s 2.75s infinite ease-in-out alternate, circleOpacity 0.5s 8s forwards;
+}
+
+@keyframes circleMove {
+  0% {
+    left: 0%;
+  }
+
+  100% {
+    left: calc(100% - 20px);
+  }
+}
+
+@keyframes circleOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
